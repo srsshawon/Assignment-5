@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
 </head>
-<body>
+<body class="bg-base-200">
+    <!-- Navbar -->
+    <div class="navbar bg-white rounded-xl px-4  h-12  shadow-sm mt-4">
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl"><img src="assets/logo.png"> <span class="font-poppins font-light">Dev</span><span class="font-poppins font-bold">Board</span></a>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="bg-gray-200 rounded-xl h-8 px-2 flex items-center">
+                    <img class="h-6" src="assets/checkbox.png" alt="">
+                    <span class="badge badge-sm text-lg ml-1">23</span>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
+                <button>
+                    <img id="themeChanger" src="assets/theme-btn.png" alt="Theme" class="h-6">
+                </button>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Secrion -->
+    <section class="flex gap-4 p-4">
+        <!-- Banner Section and card section -->
+         <div class="flex-1">
+            <!-- Banner Section -->
+             <div class="grid grid-cols-3 gap-4 my-6">
+                <!-- left card -->
+                <div class="flex items-center gap-3 bg-base-200 p-4 rounded-xl shadow-sm">
+                    <div class=" text-white p-2 rounded-lg">
+                        <input type="checkbox" checked="checked" class="checkbox  bg-blue-800 checked:bg-blue-400 checked:text-white"/>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 text-sm">Task Assigned</p>
+                        <h2 class="text-2xl font-extrabold text-slate-800">05</h2>
+                    </div>
+                </div>
+
+             </div>
+         </div>
+
+
+         <!-- Right Sidebar -->
+          <aside class="w-80 bg-base-100 shadow-md p-4 rounded-xl">
+
+          </aside>
+    </section>
+
     
+
+
+
+
 </body>
 </html>
