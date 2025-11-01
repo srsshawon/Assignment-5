@@ -7,7 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script>
+    
+    <script type="text/tailwindcss">
     tailwind.config = {
       theme: {
         extend: {
@@ -19,7 +20,7 @@
     }
   </script>
 </head>
-<body class="bg-base-200">
+<body class="bg-base-200 transition-colors duration-500">
     <!-- Navbar -->
     <div class="navbar bg-white rounded-xl px-4  h-12  shadow-sm mt-4">
         <div class="flex-1">
@@ -28,7 +29,7 @@
         <div class="flex items-center gap-6">
             <div class="bg-gray-200 rounded-xl h-8 px-2 flex items-center">
                     <img class="h-6" src="assets/checkbox.png" alt="">
-                    <span class="badge badge-sm text-lg ml-1">23</span>
+                    <span id="completed-count" class="badge badge-sm text-lg ml-1">23</span>
             </div>
             <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
                 <button>
@@ -52,7 +53,7 @@
                     </div>
                     <div>
                         <p class="text-gray-600 text-sm">Task Assigned</p>
-                        <h2 class="text-2xl font-extrabold text-slate-800">05</h2>
+                        <h2 id="task-count" class="text-2xl font-extrabold text-slate-800">6</h2>
                     </div>
                 </div>
 
@@ -68,15 +69,15 @@
                        <img src="assets/calender.png" alt="">
                     </div>
                     <div>
-                        <p class="text-gray-600 text-sm">Tue ,</p>
-                        <p class="text-xl font-bold text-slate-800">Oct 7 2025</p>
+                        <p id="day" class="text-gray-600 text-sm">Tue ,</p>
+                        <p id="date" class="text-xl font-bold text-slate-800">Oct 7 2025</p>
                     </div>
                 </div>
              </div>
              <!-- Card Section -->
               <div class="grid grid-cols-3 gap-4 ">
                 <!-- Card 1 -->
-                 <div class="bg-gray-200 p-5 rounded-xl shadow-sm ">
+                 <div class="task-card bg-gray-200 p-5 rounded-xl shadow-sm ">
                     <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">ShopEase</span>
                 
                     <h2 class="text-lg font-semibold mt-3">Fix Mobile Button Issue</h2>
@@ -86,17 +87,17 @@
                     </p>
                 
                     <div class="flex items-center justify-between mt-4">
-                        <p class="text-sm text-gray-500">
-                        <span class="font-medium text-black">Deadline</span><br>
+                        <p class="text-sm text-black">
+                        <span class="font-medium text-gray-500 ">Deadline</span><br>
                         21 March 2025
                         </p>
-                        <button class="btn btn-sm bg-blue-600 text-white  rounded-lg">
+                        <button id="card-1" class=" complete btn btn-sm bg-blue-600 text-white  rounded-lg">
                         Completed
                         </button>
                     </div>
                 </div>
                 <!-- Card 2 -->
-                 <div class="bg-gray-200 p-5 rounded-xl shadow-sm ">
+                 <div class="task-card bg-gray-200 p-5 rounded-xl shadow-sm ">
                     <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">CloudSync</span>
                 
                     <h2 class="text-lg font-semibold mt-3">Add Dark Mode</h2>
@@ -106,95 +107,95 @@
                     </p>
                 
                     <div class="flex items-center justify-between mt-4">
-                        <p class="text-sm text-gray-500">
-                        <span class="font-medium text-black">Deadline</span><br>
+                        <p class="text-sm text-black">
+                        <span class="font-medium text-gray-500 ">Deadline</span><br>
                         21 March 2025
                         </p>
-                        <button class="btn btn-sm bg-blue-600 text-white  rounded-lg">
+                        <button id="card-2" class=" complete btn btn-sm bg-blue-600 text-white  rounded-lg">
                         Completed
                         </button>
                     </div>
                 </div>
 
                 <!-- card 3 -->
-                 <div class="bg-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition">
-                    <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">ShopEase</span>
+                 <div class="task-card bg-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+                    <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">SwiftPay</span>
                 
-                    <h2 class="text-lg font-semibold mt-3">Fix Mobile Button Issue</h2>
+                    <h2 class="text-lg font-semibold mt-3">Optimize  Home page </h2>
                 
                     <p class="text-sm text-gray-500 mt-2">
                     Debug using Chrome DevTools, check for overlapping elements, 
                     </p>
                 
                     <div class="flex items-center justify-between mt-4">
-                        <p class="text-sm text-gray-500">
-                        <span class="font-medium text-black">Deadline</span><br>
+                        <p class="text-sm text-black ">
+                        <span class="font-medium text-gray-500 ">Deadline</span><br>
                         21 March 2025
                         </p>
-                        <button class="btn btn-sm bg-blue-600 text-white hover:bg-blue-700 rounded-lg">
+                        <button id="card-3" class=" complete btn btn-sm bg-blue-600 text-white hover:bg-blue-700 rounded-lg">
                         Completed
                         </button>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
-                 <div class="bg-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition">
-                    <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">ShopEase</span>
+                 <div class="task-card bg-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+                    <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">Meta</span>
                 
-                    <h2 class="text-lg font-semibold mt-3">Fix Mobile Button Issue</h2>
+                    <h2 class="text-lg font-semibold mt-3">Add new emoji 🤲</h2>
                 
                     <p class="text-sm text-gray-500 mt-2">
                     Debug using Chrome DevTools, check for overlapping elements, 
                     </p>
                 
                     <div class="flex items-center justify-between mt-4">
-                        <p class="text-sm text-gray-500">
-                        <span class="font-medium text-black">Deadline</span><br>
+                        <p class="text-sm text-black ">
+                        <span class="font-medium text-gray-500 ">Deadline</span><br>
                         21 March 2025
                         </p>
-                        <button class="btn btn-sm bg-blue-600 text-white hover:bg-blue-700 rounded-lg">
+                        <button id="card-4" class=" complete btn btn-sm bg-blue-600 text-white hover:bg-blue-700 rounded-lg">
                         Completed
                         </button>
                     </div>
                 </div>
                 
                 <!-- card 5 -->
-                 <div class="bg-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition">
-                    <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">ShopEase</span>
+                 <div class="task-card bg-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+                    <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">Google LLC</span>
                 
-                    <h2 class="text-lg font-semibold mt-3">Fix Mobile Button Issue</h2>
+                    <h2 class="text-lg font-semibold mt-3">Integrate OpenAI API</h2>
                 
                     <p class="text-sm text-gray-500 mt-2">
                     Debug using Chrome DevTools, check for overlapping elements, 
                     </p>
                 
                     <div class="flex items-center justify-between mt-4">
-                        <p class="text-sm text-gray-500">
-                        <span class="font-medium text-black">Deadline</span><br>
+                        <p class="text-sm text-black ">
+                        <span class="font-medium text-gray-500 ">Deadline</span><br>
                         21 March 2025
                         </p>
-                        <button class="btn btn-sm bg-blue-600 text-white hover:bg-blue-700 rounded-lg">
+                        <button id="card-5" class=" complete btn btn-sm bg-blue-600 text-white hover:bg-blue-700 rounded-lg">
                         Completed
                         </button>
                     </div>
                 </div>
 
                 <!-- Card 6 -->
-                 <div class="bg-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition">
-                    <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">ShopEase</span>
+                 <div class="task-card bg-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+                    <span class="text-xs font-poppins font-medium bg-white px-3 py-1 rounded-full shadow-sm">Glassdoar</span>
                 
-                    <h2 class="text-lg font-semibold mt-3">Fix Mobile Button Issue</h2>
+                    <h2 class="text-lg font-semibold mt-3">Improve Job searching</h2>
                 
                     <p class="text-sm text-gray-500 mt-2">
                     Debug using Chrome DevTools, check for overlapping elements, 
                     </p>
                 
                     <div class="flex items-center justify-between mt-4">
-                        <p class="text-sm text-gray-500">
-                        <span class="font-medium text-black">Deadline</span><br>
+                        <p class="text-sm text-black ">
+                        <span class="font-medium text-gray-500 ">Deadline</span><br>
                         21 March 2025
                         </p>
-                        <button class="btn btn-sm bg-blue-600 text-white hover:bg-blue-700 rounded-lg">
+                        <button id="card-6" class=" complete btn btn-sm bg-blue-600 text-white hover:bg-blue-700 rounded-lg">
                         Completed
                         </button>
                     </div>
@@ -206,15 +207,15 @@
 
          <!-- Right Sidebar -->
           <aside class="w-80 bg-base-100 shadow-md p-4 rounded-xl">
-            <div class="flex flex-col items-center justify-center my-4">
-                <div class="flex items-center justify-center space-x-2 my-4">
+            <div class="flex flex-col items-center justify-center mb-4">
+                <div class="flex items-center justify-center space-x-2 mb-4">
                     <img src="assets/activity.png" >
                     <h2 class="text-lg font-semibold text-gray-800">Activity Log</h2>
                 </div>
-                <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Clear History</button>
+                <button id="clear" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">Clear History</button>
             </div>
             <hr class="border-0 border-t-2 border-dashed border-gray-400">
-            <div class="flex flex-col gap-2 my-4">
+            <div id="activity-log" class="flex flex-col gap-2 my-4">
 
             </div>
           </aside>
@@ -223,7 +224,11 @@
     
 
 
-
-
+<script src="scripts/time.js"></script>
+<script src="scripts/activity.js"></script>
+<script src="scripts/complete.js"></script>
+<script src="scripts/date.js"></script>
+<script src="scripts/clear.js"></script>
+<script src="scripts/theme.js"></script>
 </body>
 </html>
