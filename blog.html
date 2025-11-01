@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <script type="text/tailwindcss">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-base-200 transition-colors duration-500">
+    <!-- Navbar -->
+    <div class="navbar bg-white rounded-xl px-4  h-12  shadow-sm mt-4">
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl"><img src="assets/logo.png"> <span class="font-poppins font-light">Dev</span><span class="font-poppins font-bold">Board</span></a>
+        </div>
+        
+                <a href="index.html"><button id="blog-btn" class="btn bg-blue-600 text-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Back To Desk</button></a>
+    </div>   
+
+    <div class="text-center my-4">
+        <h1 class="font-bold text-4xl">Blog</h1>
+    </div>
+    <!-- Question Section -->
+    <section>
+        <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" checked="checked" />
+            <div class="collapse-title font-semibold">What are the different ways to select an element in the DOM?
+            </div>
+            <div class="collapse-content text-sm">There are many ways to select an element in DOm like get element by id , get element by class, get element  by querry selector etc</div>
+        </div>
+        <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">What is the difference between innerHTML, innerText, and textContent ?</div>
+            <div class="collapse-content text-sm">innerHTMl select or retuns the html  tags in an element, innertext  select the text   inside an elements, textcontent returns or select the text content of an element</div>
+        </div>
+        <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">What is event delegation in the DOM?
+            </div>
+            <div class="collapse-content text-sm"></div>
+        </div>
+        <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">What is event bubbling in the DOM?
+            </div>
+            <div class="collapse-content text-sm"></div>
+        </div>
+        <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">How do you create, add, and remove elements using JavaScript?
+            </div>
+            <div class="collapse-content text-sm">by using creat element you can creat  by using .add you can add and by using .remove you can remove</div>
+        </div>
+    </section>
+</body>
